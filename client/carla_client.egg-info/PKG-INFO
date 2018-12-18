@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: carla-client
+Version: 0.8.2
+Summary: Python API for communicating with the CARLA server.
+Home-page: https://github.com/carla-simulator/carla
+Author: The CARLA team
+Author-email: carla.simulator@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN

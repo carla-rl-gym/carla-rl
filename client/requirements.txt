@@ -1,0 +1,11 @@
+Pillow
+numpy
+protobuf
+pygame
+matplotlib
+future
+tensorboardX
+scikit-video
+pyyaml
+gym
+IPython

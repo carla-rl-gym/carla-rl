@@ -1,0 +1,31 @@
+agent: a2c
+num_updates: 100000
+lr: 0.0007 # Learning rate
+eps: 0.00001 # RMSprop optimizer epsilon
+alpha: 0.99 # RMSProp alpha
+gamma: 0.99 # Discount factor for rewards
+use_gae: False # Use generalized advantage estimation
+tau: 0.95 # GAE parameter
+action_type: carla-original # carla-original or continuous
+entropy_coef: 0.01
+value_loss_coef: 0.5
+max_grad_norm: 0.5 # Max norm of the gradients
+seed: 1 # Random seed
+num_processes: 8 # Number of processes to use for training.
+num_steps: 20
+num_stack_frames: 2 # Number of stacked frames to train
+add_timestep: False # Add a timestep to observations
+recurrent_policy: False
+num_virtual_goals: 0 # Number of virtual goals for HER. 0 means we dont use HER
+beta: 1 # Parameter to control the sampling probability of frames towards the end of the rollout in HER
+experiments_subset: # keep_lane, one_turn, keep_lane_one_turn, no_dynamic_objects or None
+no_reward_norm: True # Don't normalize rewards
+no_obs_norm: False # Don't normalize observations
+rel_coord_system: False # False: use world coordinate system, True: relative to ego-vehicle coordinate system
+
+# PPO-specific parameters
+ppo_epoch: 4
+num_mini_batch: 16 # Number of mini-batches for PPO
+clip_param: 0.2 # PPO clip parameter
+
+reward_class: CarlaReward
