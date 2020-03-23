@@ -194,7 +194,7 @@ def main():
             carla_rewards = torch.tensor([i['carla-reward'] for i in info], dtype=torch.float)
             episode_reward += carla_rewards
             total_reward += carla_rewards.sum().item()
-            total_steps += config.num_processes * config.num_steps
+            total_steps += config.num_processes
 
             if done.any():
                 total_episodes += done.sum()
